@@ -237,14 +237,19 @@ window.onload = function () {
 // hide placeholder
     $('.name-wrapper__text').click(function () {
         $(this).hide();
+        $(this).siblings('.map-form__field').focus();
+
     });
 
-    $('#input').focusout(function () {
-        if ($(this).val().trim() == '') {
-            $('#inputLbl').addClass('top');
-        }
-    });
-
+    $('.forPlaceholder').focus(function() {
+        $(this).siblings('.name-wrapper__text').hide();
+     });
+     $('.forPlaceholder').blur(function() {
+        if ($(this).val().length == 0)
+            $(this).siblings('.name-wrapper__text').show();
+     });
+     $('.forPlaceholder').blur();
+     
     // Scroll to top
     $('#scroll').on("click", scrollToUp);
     function scrollToUp(ev) {
@@ -257,7 +262,6 @@ window.onload = function () {
             scrollTop: top
         }, 3000);
     }
-
 
 
 
