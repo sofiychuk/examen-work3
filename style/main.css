@@ -800,10 +800,14 @@ div > [class*='col-'] {
 .map__box-wrapper {
   position: relative;
   float: right;
-  top: -1150px; }
+  top: -1190px;
+  cursor: pointer; }
+  @media screen and (max-width: 992px) {
+    .map__box-wrapper {
+      top: -1170px; } }
   @media screen and (max-width: 768px) {
     .map__box-wrapper {
-      top: -1120px; } }
+      top: -1150px; } }
 
 .map-home__box,
 .map-phone__box {

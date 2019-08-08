@@ -944,9 +944,13 @@ div>[class*='col-'] {
 .map__box-wrapper {
     position: relative;
     float: right;
-    top: -1150px;
+    top: -1190px;
+    cursor: pointer;
+    @media screen and (max-width: 992px) {
+        top: -1170px;
+    }
     @media screen and (max-width: 768px) {
-        top: -1120px;
+        top: -1150px;
     }
 }
 
